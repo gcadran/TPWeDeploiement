@@ -78,4 +78,4 @@ Déployer une application **Angular** (front) et **Node.js** (back) sur une mach
 
 ## Licence
 
-Ce projet est réalisé dans le cadre du Master 1 IL – ISTIC Rennes.
+Ce projet est réalisé dans le cadre de WE du Master 1 IL – ISTIC Rennes.
