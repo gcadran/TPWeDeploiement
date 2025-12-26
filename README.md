@@ -25,26 +25,22 @@ Déployer une application **Angular** (front) et **Node.js** (back) sur une mach
 1. **Création de la VM Ubuntu 20.04**
 2. **Installation des dépendances** : Node.js, PostgreSQL, Nginx, Fail2ban, UFW
 3. **Déploiement du backend Node.js** (API RealWorld)
-4. **Migration Prisma** et création de la base `realworld`
-5. **Déploiement du frontend Angular** (build de production)
-6. **Configuration du reverse proxy Nginx**
-7. **Tests des routes** :
-	- `/` : Frontend Angular
-	- `/api` : Backend Node.js
-8. **Sécurisation** : activation de Fail2ban et UFW
+4. **Déploiement du frontend Angular** (build de production)
+5. **Configuration du reverse proxy Nginx**
+6. **Sécurisation** : activation de Fail2ban et UFW
 
 ---
 
 ## Difficultés rencontrées
 
 ### 1. Version d’Angular différente du TP
-- Le TP demandait une ancienne version, le repo officiel était plus récent (fichiers déplacés, commandes différentes).
+- L'énoncé du TP était sur une ancienne version, le repo officiel était plus récent donc : fichiers déplacés, commandes différentes.
 
 ### 2. Connexion SSH obligatoire
-- VM ISTIC : connexion uniquement par clé SSH (pas de mot de passe). Problème de clé mal configurée → recréation de la VM.
+- VM ISTIC : connexion uniquement par clé SSH (pas de mot de passe). J'ai eu un problème de clé mal configurée donc j'ai dû recréer la VM.
 
-### 3. Mauvais choix d’image (Debian au lieu d’Ubuntu)
-- Problèmes de paquets, MongoDB non installable, PostgreSQL à configurer manuellement. 
+### 3. Mauvais choix d’OS (Debian au lieu d’Ubuntu)
+- Le problème est que j'ai choisi debian alors que j'avais déjà changé plusieurs fois de VM donc j'ai voulu continuer avec debian, alors le problème est que MongoDB n'est pas installable sur debian, alors j'ai utilisé PostgreSQL.
 
 ### 4. VM non accessible depuis Internet
 - Impossible d’utiliser Let’s Encrypt (pas d’accès public). Site disponible uniquement en HTTP local.
@@ -54,9 +50,9 @@ Déployer une application **Angular** (front) et **Node.js** (back) sur une mach
 ## État final du projet
 
 - [x] Front Angular déployé
-- [x] API Node.js fonctionnelle
+- [x] Node.js fonctionnelle
 - [x] PostgreSQL configuré
-- [x] Nginx opérationnel (reverse proxy + fichiers statiques)
+- [x] Nginx opérationnel 
 - [x] Fail2ban + UFW activés
 - [ ] HTTPS (Let’s Encrypt impossible)
 
@@ -76,6 +72,5 @@ Déployer une application **Angular** (front) et **Node.js** (back) sur une mach
 
 ---
 
-## Licence
 
 Ce projet est réalisé dans le cadre de WE du Master 1 IL – ISTIC Rennes.
